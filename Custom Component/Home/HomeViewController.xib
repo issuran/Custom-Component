@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Custom_Component" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que deseja fazer agora?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zN-zN-308">
+                    <rect key="frame" x="87.5" y="323.5" width="200" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </label>
+                <stackView opaque="NO" contentMode="center" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vkv-6K-OWM">
+                    <rect key="frame" x="0.0" y="352" width="375" height="110"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sWS-vy-QkG">
+                            <rect key="frame" x="0.0" y="0.0" width="10" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="ZBH-bk-LIj"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qay-Pv-EGj" customClass="CustomButtonView" customModule="Custom_Component" customModuleProvider="target">
+                            <rect key="frame" x="32.5" y="0.0" width="144" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="144" id="qYe-nC-h9X"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lc8-J4-vDx" customClass="CustomButtonView" customModule="Custom_Component" customModuleProvider="target">
+                            <rect key="frame" x="198.5" y="0.0" width="144" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="144" id="zIc-9w-Wxt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlL-iy-Rbe">
+                            <rect key="frame" x="365" y="0.0" width="10" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="10" id="UUp-z8-WGa"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.49374162420000001" green="1" blue="0.4460565037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="wbV-OO-hpn"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Vkv-6K-OWM" secondAttribute="trailing" id="Ah9-Kl-plt"/>
+                <constraint firstItem="Vkv-6K-OWM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="gZ4-Aa-6hy"/>
+                <constraint firstItem="9zN-zN-308" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="n9n-Do-DW9"/>
+                <constraint firstItem="Vkv-6K-OWM" firstAttribute="top" secondItem="9zN-zN-308" secondAttribute="bottom" constant="8" id="nWb-Cd-G40"/>
+                <constraint firstItem="9zN-zN-308" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oWP-rO-1zY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
