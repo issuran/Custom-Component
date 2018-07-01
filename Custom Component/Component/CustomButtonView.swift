@@ -35,11 +35,11 @@ class CustomButtonView: UIView {
         contentView.layer.masksToBounds = true
         contentView.layer.cornerRadius = 8
         contentView.layer.borderWidth = 2
-        contentView.backgroundColor = UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
-        
-        backgroundView.backgroundColor = UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
-        
-        textView.text = "Transferência\nbancária"
+//        contentView.backgroundColor = UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
+//        
+//        backgroundView.backgroundColor = UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
+
+        textView.text = "Transferência eletrônica"
         textView.textColor =  .white
         
         imageView.image = UIImage(named: "transfer")
