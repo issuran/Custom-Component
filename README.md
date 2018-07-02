@@ -19,9 +19,6 @@ A collection of custom components
 # Author
 Tiago Oliveira
 
-# Special Thanks
-Denuxo
-
 #### Images
 
 Icons from: 
