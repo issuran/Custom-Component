@@ -22,5 +22,5 @@ Tiago Oliveira
 #### Images
 
 Icons from: 
-[Flat Icon](www.flaticon.com)
+[Flat Icon](www.flaticon.com) ,
 [Icons 8](https://icons8.com)
