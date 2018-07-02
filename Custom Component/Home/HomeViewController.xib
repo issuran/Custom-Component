@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Custom_Component" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="igK-TM-m3S" id="aCy-NJ-qet"/>
+                <outlet property="customLeft" destination="URP-NW-MzC" id="LdL-rP-XYJ"/>
+                <outlet property="tap" destination="W6R-VX-gLX" id="SRl-mz-p4P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -20,14 +23,24 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que deseja fazer agora?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3B-31-2j6">
+                    <rect key="frame" x="0.0" y="252.5" width="375" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dz-8f-tjT">
                     <rect key="frame" x="37" y="278.5" width="300" height="110"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="URP-NW-MzC" customClass="CustomButtonView" customModule="Custom_Component" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="150" height="110"/>
+                            <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="SEm-5M-APV"/>
                             </constraints>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="W6R-VX-gLX" appends="YES" id="F46-ap-ELD"/>
+                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46Y-Lf-BX3" customClass="CustomButtonView" customModule="Custom_Component" customModuleProvider="target">
                             <rect key="frame" x="150" y="0.0" width="150" height="110"/>
@@ -44,22 +57,75 @@
                         <constraint firstAttribute="height" constant="110" id="tei-SN-lPj"/>
                     </constraints>
                 </stackView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que deseja fazer agora?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B3B-31-2j6">
-                    <rect key="frame" x="0.0" y="252.5" width="375" height="18"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O que deseja fazer agora?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MID-sd-jgc">
+                    <rect key="frame" x="0.0" y="429" width="375" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="j4c-x1-aTM"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6c-Om-8Y9">
+                    <rect key="frame" x="37.5" y="460" width="300" height="110"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWb-5X-mvr" customClass="CustomButton" customModule="Custom_Component" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="150" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="XM9-ng-oI8"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleColor" red="0.49374162420000001" green="1" blue="0.4460565037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="printOi:" destination="-1" eventType="touchUpInside" id="vVl-TB-NIv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI9-ah-oId" customClass="CustomButton" customModule="Custom_Component" customModuleProvider="target">
+                            <rect key="frame" x="150" y="0.0" width="150" height="110"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="qRX-Va-ZgP"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="110" id="T4b-pF-lYm"/>
+                    </constraints>
+                </stackView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="igK-TM-m3S">
+                    <rect key="frame" x="0.0" y="100" width="375" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="luE-I8-Nbj"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="86z-ny-nNV">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <constraints>
                 <constraint firstItem="0Dz-8f-tjT" firstAttribute="top" secondItem="B3B-31-2j6" secondAttribute="bottom" constant="8" id="1Hv-vc-gBO"/>
+                <constraint firstItem="MID-sd-jgc" firstAttribute="top" secondItem="0Dz-8f-tjT" secondAttribute="bottom" constant="40" id="3m6-IY-nKX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MID-sd-jgc" secondAttribute="trailing" id="9Mc-o3-idm"/>
                 <constraint firstItem="B3B-31-2j6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="233" id="ECQ-gm-cdO"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="B3B-31-2j6" secondAttribute="trailing" id="Jsl-E1-BqI"/>
+                <constraint firstItem="MID-sd-jgc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OBY-EG-eI5"/>
+                <constraint firstItem="J6c-Om-8Y9" firstAttribute="top" secondItem="MID-sd-jgc" secondAttribute="bottom" constant="10" id="T5E-hc-wk1"/>
+                <constraint firstItem="J6c-Om-8Y9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ThF-Xj-tCB"/>
+                <constraint firstItem="igK-TM-m3S" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="c0K-Em-Xfe"/>
                 <constraint firstItem="0Dz-8f-tjT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hCE-uC-RWc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="igK-TM-m3S" secondAttribute="trailing" id="lsL-K6-nn4"/>
                 <constraint firstItem="B3B-31-2j6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pHu-gI-c8o"/>
+                <constraint firstItem="igK-TM-m3S" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u6a-Zw-iJw"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
+        <tapGestureRecognizer id="W6R-VX-gLX"/>
     </objects>
 </document>

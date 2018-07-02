@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         let homeViewController = HomeViewController()
-        homeViewController.view.backgroundColor = UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
+        homeViewController.view.backgroundColor = .orange //UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
         
         //tell our window what its first view controller
         window!.rootViewController = homeViewController

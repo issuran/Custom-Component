@@ -14,6 +14,10 @@
 		52B853C420E7D2C700A14FC7 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B853C220E7D2C700A14FC7 /* HomeViewController.xib */; };
 		52B853C720E7D35700A14FC7 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B853C620E7D35700A14FC7 /* CustomButtonView.swift */; };
 		52B853C920E7D43200A14FC7 /* CustomButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52B853C820E7D43200A14FC7 /* CustomButtonView.xib */; };
+		52BFC30F20E94156002DDB91 /* CustomButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BFC30E20E94156002DDB91 /* CustomButton.xib */; };
+		52BFC31120E942E7002DDB91 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BFC31020E942E7002DDB91 /* CustomButton.swift */; };
+		52BFC31420E957E2002DDB91 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52BFC31220E957E2002DDB91 /* CustomCollectionViewCell.swift */; };
+		52BFC31520E957E2002DDB91 /* CustomCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BFC31320E957E2002DDB91 /* CustomCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,10 @@
 		52B853C220E7D2C700A14FC7 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		52B853C620E7D35700A14FC7 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 		52B853C820E7D43200A14FC7 /* CustomButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButtonView.xib; sourceTree = "<group>"; };
+		52BFC30E20E94156002DDB91 /* CustomButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomButton.xib; sourceTree = "<group>"; };
+		52BFC31020E942E7002DDB91 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		52BFC31220E957E2002DDB91 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		52BFC31320E957E2002DDB91 /* CustomCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,10 @@
 			children = (
 				52B853C620E7D35700A14FC7 /* CustomButtonView.swift */,
 				52B853C820E7D43200A14FC7 /* CustomButtonView.xib */,
+				52BFC30E20E94156002DDB91 /* CustomButton.xib */,
+				52BFC31020E942E7002DDB91 /* CustomButton.swift */,
+				52BFC31220E957E2002DDB91 /* CustomCollectionViewCell.swift */,
+				52BFC31320E957E2002DDB91 /* CustomCollectionViewCell.xib */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -145,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B853B720E7CD7100A14FC7 /* LaunchScreen.storyboard in Resources */,
+				52BFC31520E957E2002DDB91 /* CustomCollectionViewCell.xib in Resources */,
 				52B853B420E7CD7100A14FC7 /* Assets.xcassets in Resources */,
 				52B853C420E7D2C700A14FC7 /* HomeViewController.xib in Resources */,
+				52BFC30F20E94156002DDB91 /* CustomButton.xib in Resources */,
 				52B853C920E7D43200A14FC7 /* CustomButtonView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BFC31120E942E7002DDB91 /* CustomButton.swift in Sources */,
+				52BFC31420E957E2002DDB91 /* CustomCollectionViewCell.swift in Sources */,
 				52B853C720E7D35700A14FC7 /* CustomButtonView.swift in Sources */,
 				52B853AD20E7CD6F00A14FC7 /* AppDelegate.swift in Sources */,
 				52B853C320E7D2C700A14FC7 /* HomeViewController.swift in Sources */,

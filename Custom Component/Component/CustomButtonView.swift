@@ -38,6 +38,8 @@ class CustomButtonView: UIView {
 //        contentView.backgroundColor = UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
 //        
 //        backgroundView.backgroundColor = UIColor(red:0.36, green:0.74, blue:0.3, alpha:1)
+        
+        contentView.isUserInteractionEnabled = true
 
         textView.text = "Transferência eletrônica"
         textView.textColor =  .white
