@@ -15,12 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     @IBOutlet weak var customLeft: CustomButtonView!
-    @IBOutlet var tap: UITapGestureRecognizer!
-    
-    @IBAction func printOi(_ sender: Any) {
-        print("Oi")
-        
-    }
+    @IBOutlet weak var customRight: CustomButtonView!
     
     var tapped = false
     
@@ -30,36 +25,54 @@ class HomeViewController: UIViewController {
         let nibCell = UINib(nibName: MyCollectionViewCellId, bundle: nil)
         collectionView.register(nibCell, forCellWithReuseIdentifier: MyCollectionViewCellId)
         
-        // Do any additional setup after loading the view.
         
-        customLeft.textView.text = "Comprar um bombom"
+        // Tap Left
+        let tapGesture = UILongPressGestureRecognizer(target: self, action: #selector(handleTap))
+        tapGesture.minimumPressDuration = 0
+        customLeft.contentView.addGestureRecognizer(tapGesture)
         
-        // Tap
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        customLeft.addGestureRecognizer(tapGesture)
+        // Tap Right
+        let tapGestureRight = UILongPressGestureRecognizer(target: self, action: #selector(handleTapRight))
+        tapGestureRight.minimumPressDuration = 0
+        customRight.contentView.addGestureRecognizer(tapGestureRight)
     }
     
-    // Tap action
-    @objc func handleTap() {
-        
-        if tapped {
-            customLeft.contentView.backgroundColor = UIColor.clear
-            customLeft.textView.text = "Comprar um bombom"
-        } else {
-            
-            customLeft.textView.text = "Tap recognized"
-            customLeft.contentView.backgroundColor = UIColor.lightGray
-        }
-        tapped = !tapped
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    // Tap action
+    @objc func handleTap(gesture: UITapGestureRecognizer) {
+        
+        // handle touch down and touch up events separately
+        if gesture.state == .began {
+            customLeft.contentView.backgroundColor = UIColor(red: 0.6667, green: 0.8824, blue: 0.6667, alpha:1)
+        } else if  gesture.state == .ended {
+            customLeft.contentView.backgroundColor = UIColor.clear
+            
+            print("Left")
+            customLeft.textView.text = "Eitcha lele, funcionou!"
+        }
+    }
+    
+    // Tap action Right
+    @objc func handleTapRight(gesture: UITapGestureRecognizer) {
+        
+        // handle touch down and touch up events separately
+        if gesture.state == .began {
+            customRight.contentView.backgroundColor = UIColor(red: 0.6667, green: 0.8824, blue: 0.6667, alpha:1)
+        } else if  gesture.state == .ended {
+            customRight.contentView.backgroundColor = UIColor.clear
+            
+            print("Right")
+            customLeft.textView.text = "Transferência eletrônica"
+        }
+    }
 }
 
+
+// MARK : Collection View
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

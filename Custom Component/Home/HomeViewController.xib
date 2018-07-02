@@ -14,7 +14,7 @@
             <connections>
                 <outlet property="collectionView" destination="igK-TM-m3S" id="aCy-NJ-qet"/>
                 <outlet property="customLeft" destination="URP-NW-MzC" id="LdL-rP-XYJ"/>
-                <outlet property="tap" destination="W6R-VX-gLX" id="SRl-mz-p4P"/>
+                <outlet property="customRight" destination="46Y-Lf-BX3" id="Yjx-Oj-HG5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -38,9 +38,6 @@
                             <constraints>
                                 <constraint firstAttribute="width" constant="150" id="SEm-5M-APV"/>
                             </constraints>
-                            <connections>
-                                <outletCollection property="gestureRecognizers" destination="W6R-VX-gLX" appends="YES" id="F46-ap-ELD"/>
-                            </connections>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46Y-Lf-BX3" customClass="CustomButtonView" customModule="Custom_Component" customModuleProvider="target">
                             <rect key="frame" x="150" y="0.0" width="150" height="110"/>
@@ -77,9 +74,6 @@
                             <state key="normal">
                                 <color key="titleColor" red="0.49374162420000001" green="1" blue="0.4460565037" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
-                            <connections>
-                                <action selector="printOi:" destination="-1" eventType="touchUpInside" id="vVl-TB-NIv"/>
-                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eI9-ah-oId" customClass="CustomButton" customModule="Custom_Component" customModuleProvider="target">
                             <rect key="frame" x="150" y="0.0" width="150" height="110"/>
@@ -126,6 +120,5 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
-        <tapGestureRecognizer id="W6R-VX-gLX"/>
     </objects>
 </document>
